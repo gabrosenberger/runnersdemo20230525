@@ -12,10 +12,8 @@ public class SponsorEntity {
     private Long id;
 
     @JsonIgnore
-    @OneToOne
-    @JoinColumn(nullable = false)
+    @OneToOne(mappedBy = "sponsor")
     private RunnerEntity runner;
-
 
     private String sponsorName;
 

@@ -49,6 +49,12 @@ public class RunnerController {
             model.addAttribute("runner", runner);
             double averageLaptime = runnerService.getAverageLaptime(runner.getRunnerId());
             model.addAttribute("averageLaptime", averageLaptime);
+            var sponsor = runner.getSponsor();
+            var sponsorName = "";
+            if (sponsor != null){
+                sponsorName = sponsor.getSponsorName();
+            }
+            model.addAttribute("sponsorName", sponsorName);
             return "runner";
         } else {
             return "error";

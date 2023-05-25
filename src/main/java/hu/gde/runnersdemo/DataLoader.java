@@ -33,7 +33,7 @@ public class DataLoader implements CommandLineRunner {
 
         SponsorEntity sponsor1 = new SponsorEntity();
         sponsor1.setSponsorName("Béla");
-        sponsor1.setRunner(runnerEntity);
+        runnerEntity.setSponsor(sponsor1);
 
         runnerEntity.getLaptimes().add(laptime1);
         runnerEntity.getLaptimes().add(laptime2);
@@ -58,7 +58,7 @@ public class DataLoader implements CommandLineRunner {
 
         SponsorEntity sponsor2 = new SponsorEntity();
         sponsor2.setSponsorName("Ödön");
-        sponsor2.setRunner(runnerEntity2);
+        runnerEntity2.setSponsor(sponsor2);
 
         runnerEntity2.getLaptimes().add(laptime3);
         runnerEntity2.getLaptimes().add(laptime4);
@@ -77,7 +77,7 @@ public class DataLoader implements CommandLineRunner {
 
         SponsorEntity sponsor3 = new SponsorEntity();
         sponsor3.setSponsorName("Ubul");
-        sponsor3.setRunner(runnerEntity3);
+        runnerEntity3.setSponsor(sponsor3);
 
         runnerEntity3.getLaptimes().add(laptime5);
 
