@@ -42,6 +42,16 @@ public class RunnerRestController {
         }
     }
 
+    @GetMapping("/tallestrunnername")
+    public String getTallestRunnerName() {
+        List<RunnerEntity> runners = runnerRepository.findByOrderByHeightDesc();
+        if (runners.size() != 0) {
+            return runners.get(0).getRunnerName();
+        } else {
+            return "";
+        }
+    }
+
     @GetMapping("")
     public List<RunnerEntity> getAllRunners() {
         return runnerRepository.findAll();
