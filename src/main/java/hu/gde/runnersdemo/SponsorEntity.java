@@ -15,6 +15,7 @@ public class SponsorEntity {
     @OneToOne(mappedBy = "sponsor")
     private RunnerEntity runner;
 
+
     private String sponsorName;
 
     public Long getId() {
