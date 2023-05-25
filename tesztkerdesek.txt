@@ -1,6 +1,6 @@
-Név:
-Szak:
-Neptun azonosító:
+Név: Rosenberger Gábor
+Szak: Mérnök informatikus BSC TÁV
+Neptun azonosító: A6FXAC
 
 Kérdés 1:
 Melyik szerepel az Agile Manifestoban az alábbiak közül?
