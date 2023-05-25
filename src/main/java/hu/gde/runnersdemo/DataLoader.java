@@ -19,6 +19,7 @@ public class DataLoader implements CommandLineRunner {
         RunnerEntity runnerEntity = new RunnerEntity();
         runnerEntity.setRunnerName("Tomi");
         runnerEntity.setAveragePace(310);
+        runnerEntity.setHeight(181);
 
         LapTimeEntity laptime1 = new LapTimeEntity();
         laptime1.setLapNumber(1);
@@ -38,6 +39,8 @@ public class DataLoader implements CommandLineRunner {
         RunnerEntity runnerEntity2 = new RunnerEntity();
         runnerEntity2.setRunnerName("Zsuzsi");
         runnerEntity2.setAveragePace(290);
+        runnerEntity2.setHeight(165);
+
 
         LapTimeEntity laptime3 = new LapTimeEntity();
         laptime3.setLapNumber(1);
@@ -53,6 +56,21 @@ public class DataLoader implements CommandLineRunner {
         runnerEntity2.getLaptimes().add(laptime4);
 
         runnerRepository.save(runnerEntity2);
+
+        RunnerEntity runnerEntity3 = new RunnerEntity();
+        runnerEntity3.setRunnerName("Gábor");
+        runnerEntity3.setAveragePace(250);
+        runnerEntity3.setHeight(200);
+
+        LapTimeEntity laptime5 = new LapTimeEntity();
+        laptime5.setLapNumber(3);
+        laptime5.setTimeSeconds(150);
+        laptime5.setRunner(runnerEntity3);
+
+        runnerEntity3.getLaptimes().add(laptime5);
+
+        runnerRepository.save(runnerEntity3);
+
     }
 }
 
