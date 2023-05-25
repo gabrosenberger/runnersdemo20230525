@@ -31,6 +31,8 @@ public class RunnerEntity {
     public long getAveragePace() {
         return averagePace;
     }
+    public long getHeight() { return height; }
+
 
     public void setRunnerId(long runnerId) {
         this.runnerId = runnerId;

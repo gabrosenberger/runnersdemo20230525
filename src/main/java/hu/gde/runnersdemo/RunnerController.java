@@ -24,6 +24,23 @@ public class RunnerController {
         return "runners";
     }
 
+    @GetMapping("/averageheight")
+    public String getAverageHeight(Model model) {
+        List<RunnerEntity> runners = runnerRepository.findAll();
+        if (runners.size() == 0){
+            model.addAttribute("averageHeight", 0);
+            return "averageHeight";
+        }
+        var totalHeight = 0;
+        for (RunnerEntity runner : runners) {
+
+            totalHeight += runner.getHeight();
+        }
+        double averageHeight = (double) totalHeight / runners.size();
+        model.addAttribute("averageHeight", averageHeight);
+        return "averageHeight";
+    }
+
     @GetMapping("/runner/{id}")
     public String getRunnerById(@PathVariable Long id, Model model) {
         RunnerEntity runner = runnerRepository.findById(id).orElse(null);
